@@ -1,0 +1,70 @@
+{% if post %}
+<div>
+<h1>글 수정하기</h1>
+    <form method="POST" action="{% url 'posts:update' post.id %}">
+        {% csrf_token %}
+        <h4>제목 : </h4>
+        <input type ="text" value="{{post.title}}" name = "title" required="true">
+        <br>
+        <h4>몇명 : (1 - 5까지)</h4>
+        <input type="number" value="{{post.how_many}}" name="how_many" min="1" max="5" required="true">
+        <h4>본문 : </h4>
+        <textarea cols=40 rows=10 name="text" required="true">{{post.text}}</textarea>
+        <br>
+        <input type = "submit" value="제출하기"> 
+    </form>
+</div>
+{% else %}
+<div>
+<h1>글 쓰기</h1>
+    <form method="POST" action="{% url 'posts:new' %}">
+        {% csrf_token %}
+        <h4>제목 : </h4>
+        <input type ="text" name = "title" required="true">
+        <br>
+        <h4>몇명 : (1 - 5까지)</h4>
+        <input type="number" name="how_many" min="1" max="5" required="true">
+        <h4>본문 : </h4>
+        <textarea cols=40 rows=10 name="text" required="true"> </textarea>
+        <br>
+        <input type = "submit" value="제출하기"> 
+    </form>
+</div>
+{% endif %}
+<div>
+    <p><a href="{% url 'posts:post_list'%}">글쓰기 취소</a></p>
+</div>
+
+<!-- 미팅 글쓰기
+<p><a href="{% url 'posts:post_list'%}">돌아가기</a></p>
+
+{% if post.title == 'admin12345' %}
+    <form action="{% url 'posts:create' %}">
+        <h4>제목 : </h4>
+            <input type ="text" name = "title" required="true">
+            <br>
+            <br>
+        <h4>몇명 : (1 - 5까지)</h4>
+            <input type="number" name="how_many" min="1" max="5" required="true">
+        <h4>본문 : </h4>
+            <textarea cols=40 rows=10 name="text" required="true"> </textarea>
+            <br>
+            <br>
+            <input class = "btn btn-dark" type = "submit" value="제출하기"> 
+    </form>
+    {% else %}
+    <h1> 수정하기</h1>
+    <form action="{% url 'posts:update' post.id %}">
+        <h4>제목 : </h4>
+            <input type ="text" value="{{post.title}}" name = "title" required="true">
+            <br>
+            <br>
+        <h4>몇명 : (1 - 5까지)</h4>
+            <input type="number" value="{{post.how_many}}" name="how_many" min="1" max="5" required="true">
+        <h4>본문 : </h4>
+            <textarea cols=40 rows=10 name="text" required="true" >{{post.text}} </textarea>
+            <br>
+            <br>
+            <input class = "btn btn-dark" type = "submit" value="제출하기"> 
+    </form>
+{% endif %} -->

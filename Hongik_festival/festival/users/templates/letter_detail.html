@@ -1,0 +1,15 @@
+<!--쪽지 상세 페이지입니다.-->
+<div>
+    <p>To: {{letter.letter_to}}</p>
+    <p>From: {{letter.letter_from}}</p>
+    <p>내용: {{letter.text}}</p>
+    <p>확인여부: {{letter.check}}</p>
+    <p>{{letter.created_at}}</p>
+    <br>
+</div>
+
+{% if user == letter.letter_to %}
+<a href="{% url 'users:letter_post' user_id=letter.letter_from.id %}">답장하기</a>
+{% endif %}
+<!--삭제하기 전에 정말 삭제하시겠습니까? 확인메시지 뜨면 좋을것 같아요-->
+<a href="{% url 'users:letter_delete' letter.id %}">삭제하기</a>

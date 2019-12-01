@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./lineup.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    메터리얼라이즈-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--    <script type="text/javascript" src="./script.js"></script>-->
+    <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+    </script>
+</head>
+    <body id="materialize-overrides">
+    <!--   헤더-->
+      <nav>
+        <div class="nav-wrapper pink">
+          <a href="{% url 'index' %}" class="brand-logo"><img src="/static/img/logo.png" alt=""></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">미팅</a></li>
+                <li><a href="badges.html">1대1쪽지보내기</a></li>
+                <li><a href="collapsible.html">홍대술집</a></li>
+                <li><a href="mobile.html">신고하기</a></li>
+              </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="{% url 'posts:post_list' %}">미팅게시판</a></li>
+        <li><a href="{% url 'users:user_list' %}">회원목록</a></li>
+        <li><a href="{% url 'bars:bar_list' %}">홍대술집</a></li>
+        <li><a href="mobile.html">신고하기</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'users:mypage' %}">마이페이지</a></li>
+        <li><a href="{% url 'users:logout' %}">로그아웃</a></li>
+        {% else %}
+        <li><a href="{% url 'users:direct_login' %}">로그인</a></li>
+        <li><a href="{% url 'users:signup' %}">회원가입</a></li>
+        {% endif %}
+      </ul>
+    
+
+      <div class="lineup_text">
+          <strong>개발자 소개</strong>
+          
+      </div>
+      <div class="container_fluid">
+        <div class="box" >
+            <img class="box_images" src="./images/wonjun.jpg" alt="조원준">
+        </div>
+      </div>
+      
+        </div>
+    </body>
+</html>

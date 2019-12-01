@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+#bootstrap-overrides .navbar{
+    background-image: url("images/navbar.png");
+    background-size: cover;
+}
+
+#bootstrap-overrides #main-logo{
+    width: 50%
+}
+
+#bootstrap-overrides .navbar-brand{
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    height: 50%;
+    margin-right: 20px;
+    margin-top: 15px;    
+}
+#bootstrap-overrides .nav-link{
+    color:white;
+}
+
+
+
+@media(max-width:600px){
+    #contain {
+        width: 100%;
+        padding: 5% 5%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .heart{
+        background-color: rgb(255, 20, 118);
+        border-radius: 80px;
+        width: 40%;
+        box-sizing: border-box;
+    }
+    .heart_text{
+        padding: 1%;
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .heart::after {
+        content:" ";
+        display: block;
+        clear: both;
+    }
+
+    .message{
+        padding: 3%;
+        height: 12vh;
+        border: solid;
+        border-width: thin;
+        border-color: darkgray;
+        margin: 5%;
+        box-sizing: border-box;
+    }
+
+    .profile{
+        width: 60px; 
+        height: 60px;
+        border: 1px solid;
+        border-color: darkgray;
+        border-radius: 50%;
+        border-width: thin;
+        float: left;
+    }
+
+    .name {
+        color: darkgray;
+        float: left;
+        margin-left: 2%;
+    }
+    .name_name{
+       font-weight: bold;
+       font-size: 1.3em; 
+       margin-bottom: 10%; 
+    }
+    .name_text{
+        font-size: 0.9em;
+        margin: 0;
+    }
+    .sec{
+        float: right;
+        color: black;
+        font-size: 0.8em;
+        margin-top: 1%;
+    }
+    .sec::after {
+        content:" ";
+        display: block;
+        clear: both;
+    }
+    .sec_age{
+        margin-top: 30%;
+        margin-bottom: 20%;
+        
+    }
+    .sec_time{
+        font-size: 0.7em;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    메터리얼라이즈-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--    <script type="text/javascript" src="./script.js"></script>-->
+    <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+    </script>
+    <style>
+        .brand-logo img{
+    width: 30vw;
+}
+
+@media(max-width: 600px){
+    
+    
+    .brand-logo img{width: 60vw;}
+    .collection{}
+    .collection-item{margin: 5% 5%;}
+    
+    #materialize-overrides .title_sub{
+    border-radius: 80px;
+    padding: 0 5vw;
+    margin: 3vw 0 3vw 2vw;
+    }    
+
+    #materialize-overrides .title{
+    margin-top: 5vw;
+    }    
+    .secondary-content{
+/*    font-size: 1em;*/
+    }
+    
+    #materialize-overrides .pagination{
+    margin-top: 15vw;        
+    }
+    
+    #materialize-overrides .material-icons{
+        margin-top: 1vw;
+        font-size: 26px;
+    }
+    
+    #materialize-overrides .cancel{
+        margin-left: 50vw;
+    }
+    
+    #materialize-overrides .heart{
+        margin-left: 12vw;
+    }
+    
+    </style>
+</head>
+<body id="materialize-overrides">
+<!--   헤더-->
+ 
+  <nav>
+    <div class="nav-wrapper pink">
+      <a href="#!" class="brand-logo"><img src="./img/logo.png" alt=""></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">미팅</a></li>
+            <li><a href="badges.html">1대1쪽지보내기</a></li>
+            <li><a href="collapsible.html">홍대술집</a></li>
+            <li><a href="mobile.html">신고하기</a></li>
+          </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">미팅</a></li>
+    <li><a href="badges.html">1대1쪽지보내기</a></li>
+    <li><a href="collapsible.html">홍대술집</a></li>
+    <li><a href="mobile.html">신고하기</a></li>
+  </ul>
+  
+<!--   타이틀-->          
+    <a class="title_sub waves-effect waves-light btn-small pink"><b>쪽지함</b></a>
+    
+<!--   리스트-->
+    <ul class="collection">
+    <li class="collection-item avatar">
+     <img src="./img/main_left.png" alt="" class="circle">
+      <span class="title">안현준</span>
+      <p>2대2미팅입니다~2대2미팅입니다~2대2미팅입니다~
+      </p>
+      <a href="#!" class="secondary-content"><i>남자24</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="./img/main_left.png" alt="" class="circle">
+      <span class="title">안현준</span>
+      <p>2대2미팅입니다~2대2미팅입니다~2대2미팅입니다~
+      </p>
+      <a href="#!" class="secondary-content"><i>남자24</i></a>
+    </li>
+    <li class="collection-item avatar">
+     <img src="./img/main_left.png" alt="" class="circle">
+      <span class="title">안현준</span>
+      <p>2대2미팅입니다~2대2미팅입니다~2대2미팅입니다~
+      </p>
+      <a href="#!" class="secondary-content"><i>남자24</i></a>
+    </li>
+    <li class="collection-item avatar">
+     <img src="./img/main_left.png" alt="" class="circle">
+      <span class="title">안현준</span>
+      <p>2대2미팅입니다~2대2미팅입니다~2대2미팅입니다~
+      </p>
+      <a href="#!" class="secondary-content"><i>남자24</i></a>
+    </li>
+  </ul>
+
+<a class="title_sub waves-effect waves-light btn-large pink"><b>보내기</b></a>
+<a class="title_sub waves-effect waves-light btn-large pink cancel"><b>취소하기</b></a>    
+<!--페이지네이션입니다  -->
+ <ul class="pagination center-align">
+<!--    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>-->
+    <li class="active pink"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+<!--    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>-->
+  </ul>
+     
+</body>
+</html>

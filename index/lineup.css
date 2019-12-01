@@ -1,0 +1,31 @@
+
+    .lineup_text{
+        text-align: center;
+        size: 3rem;
+        font-weight: bolder;
+    }
+    strong{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+
+    .container_fluid{
+        margin: auto;
+        text-align: center;
+        display: flex;
+    }
+    .box{
+        position: relative;
+        border: thin;
+        text-align: center;
+        margin: 10%;
+    }
+    .box_images{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        margin: 0px;
+    }

@@ -1,0 +1,11 @@
+<!--쪽지를 작성하는 페이지입니다.-->
+<div>
+    <form method="POST" action="{% url 'users:letter_post' letter_to.id%}">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Submit!">
+    </form>
+</div>

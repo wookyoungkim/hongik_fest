@@ -1,0 +1,42 @@
+<!--모든 회원 목록을 볼 수 있는 페이지입니다.-->
+{% load static %}
+{% for user in users_list %}
+<div>
+    <p>{{user.username}}</p>
+    <p>{{user.gender}}</p>
+    <p>{{bar.bio}}</p>
+    <br>
+</div>
+{% endfor %}
+
+<br><br><br>
+
+
+
+{%if users_list.has_previous%}
+<a href="?page=1">First</a>
+<a href="?page={{users_list.previous_page_number}}">Previous</a>
+{%endif%}
+
+<span>{{users_list.number}}</span>
+<span>of</span>
+<span>{{users_list.paginator.num_pages}}</span>
+
+{%if users_list.has_next%}
+<a href="?page={{users_list.next_page_number}}">Next</a>
+<a href="?page={{users_list.paginator.num_pages}}">Last</a>
+{%endif%}
+
+<br>
+<br>
+<br>
+
+
+<a href="./">전체</a>
+
+<a href="user_male">남자</a>
+
+<a href="user_female">여자</a>
+
+
+

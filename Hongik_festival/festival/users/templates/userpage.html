@@ -1,0 +1,19 @@
+<h2>{{user.username}}님의 페이지</h2>
+<br>
+<img src="{{ user.profile_image.url }}" width="240px" alt="">
+<br>
+{{user.username}}
+<br>
+{{user.gender}}
+<br>
+{{user.bio}}
+<br>
+하트 개수:
+{{user.userlike_count}}
+<br>
+
+{% if user.is_authenticated %}
+<a href="{% url 'users:letter_post' user_id=user.id %}">쪽지보내기</a>
+<br>
+<a href="{% url 'users:like_user' user_id=user.id %}">하트 보내기</a>
+{% endif %}

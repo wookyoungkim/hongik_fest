@@ -1,0 +1,36 @@
+<a href="{% url 'posts:new'%}">글쓰기</a>
+<div class="container home_text">
+    {% for post in posts %}
+    <h2>{{post.title}}</h2>
+    <p>{{post.creator.name}}</p>
+    <p>{{post.how_many}}</p>
+    <p>{{post.created_at}}</p>
+    <p><a href="{% url 'posts:detail' post.id %}">더 알아보기</a></p>
+    <br>
+    {% endfor %}
+</div>
+
+<!-- 박솔민 : 게시물 리스트 보기 + 페이지네이션 -->
+<form method="GET" action="">
+    {%csrf_token%}
+    <br>
+    인원:
+    <input type="text" name="search" value="{{ search }}" />
+    <br>
+    <input type="submit" value="검색">
+    <br>
+</form>
+
+{%if posts.has_previous%}
+<a href="?page=1">First</a>
+<a href="?page={{ posts.previous_page_number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}">previous</a>
+{%endif%}
+
+<span>{{posts.number}}</span>
+<span>of</span>
+<span>{{posts.paginator.num_pages}}</span>
+
+{%if posts.has_next%}
+<a href="?page={{posts.next_page_number}}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}">Next</a>
+<a href="?page={{posts.paginator.num_pages}}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}">Last</a>
+{%endif%}

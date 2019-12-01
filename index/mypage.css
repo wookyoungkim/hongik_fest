@@ -1,0 +1,166 @@
+#bootstrap-overrides .navbar{
+    background-image: url("images/navbar_black.png");
+    background-size: cover;
+}
+
+#bootstrap-overrides #main-logo{
+    width: 50%
+}
+
+#bootstrap-overrides .navbar-brand{
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    height: 50%;
+    margin-right: 20px;
+    margin-top: 15px;    
+}
+#bootstrap-overrides .nav-link{
+    color:white;
+}
+
+body {
+    background-image: url('fig3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+p {
+    margin-bottom: 0;
+}
+
+/* #container-fluid {
+    width: 100%;
+    padding: 3% 25%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.mypage {
+    padding: 150px;
+    background-color: rgb(0,0,0,0.7);
+}
+
+.profile_photo {
+    width: 170px; 
+    height: 170px;
+    border: dotted;
+    border-color: white;
+    border-radius: 50%;
+}
+
+.name{
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.messages{
+    float: left;
+}
+.messages_but{
+    background-color: rgb(255, 20, 118);
+    padding: 7px 20px;
+    border-radius: 80px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.messages_num{
+    color: white;
+    font-size: 1em;
+}
+
+.likes{
+    float: left;
+}
+.likes_but{
+    background-color: rgb(255, 20, 118);
+    padding: 7px 20px;
+    border-radius: 80px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 10%
+}
+.likes_num{
+    color: white;
+    font-size: 1em;
+} */
+
+.page-footer {
+    background-color: rgb(0,0,0,0.8);
+}
+.row {
+    color: rgb(0, 0,0);
+}
+.footer-copyright {
+    background-color: black;
+}
+@media(max-width:599px){
+    #container-fluid {
+        width: 100%;
+        padding: 5% 10%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+    .mypage {
+        padding: 50% 5%;
+        background-color: rgb(0,0,0,0.7);
+    }
+    .prifile_box {
+        margin-bottom: 10%;
+    }
+    .profile_photo {
+        width: 170px;
+        height: 170px;
+        border: dotted;
+        border-color: white;
+        border-radius: 50%;
+        margin-top: -10%;
+    }
+    
+    .name{
+        color: white;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .messages{
+        float: left;
+        margin-left: 10%;
+        color: white;
+       
+    }
+    .messages_but{ 
+        display: inline-block;
+        background-color: rgb(255, 20, 118);
+        padding: 1vh 5vw;
+        border-radius: 80px;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10%;
+    }
+    .messages_num{
+        font-size: 1em;
+    }
+    
+    .likes{
+        float: right;
+        margin-right: 10%;
+        color: white;
+    }
+    .likes_but{
+        display: inline-block;
+        background-color: rgb(255, 20, 118);
+        padding: 1vh 5vw;
+        border-radius: 80px;
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10%;
+    }
+    .likes_num{
+        font-size: 1em;
+    }
+}

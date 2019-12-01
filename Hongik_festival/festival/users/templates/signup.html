@@ -1,0 +1,39 @@
+<div>
+    <form method="POST" action="{% url 'users:signup'%}" enctype="multipart/form-data">
+        {%csrf_token%}
+        아이디:
+        <br>
+        <input type="text", name="username">
+        <br>
+        회원 이름:
+        <br>
+        <input type="text", name="name">
+        <br>
+        핸드폰 번호:
+        <br>
+        <input type="text", name="phone">
+        <br>
+        Password:
+        <br>
+        <input name="password1" type="password" value="">
+        <br>
+        Confirm Password:
+        <br>
+        <input name="password2" type="password" value="">
+        <br>
+        <input type='radio' name='gender' value='female' />여성
+        <input type='radio' name='gender' value='male' />남성
+        <br>
+        간단한 자기소개:
+        <input type="text" name="bio">
+        <br>
+        프로필이미지:
+        <input type="file" name="profile_img">
+        <br>
+        <br>
+        <input type='radio' name='profile_open' value='True' />공개
+        <input type='radio' name='profile_open' value='False' />비공개
+        <br>
+        <input class="btn btn-primary" type="submit" value="회원가입">
+    </form>
+</div>
